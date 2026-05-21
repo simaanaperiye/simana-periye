@@ -55,7 +55,6 @@ export default function PlanForm({ plan, mode }: Props) {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }}>
-      {/* Title */}
       <div style={{ gridColumn: "span 2" }}>
         <label style={labelStyle}>Plan Title *</label>
         <input name="title" required defaultValue={plan?.title} style={inputStyle} placeholder="e.g. Kashmir Valley Splendour" />
@@ -112,8 +111,8 @@ export default function PlanForm({ plan, mode }: Props) {
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", paddingTop: "1.5rem" }}>
-        <input type="checkbox" id="isActive" name="isActive" defaultChecked={plan?.isActive ?? true} style={{ width: 16, height: 16 }} />
-        <label htmlFor="isActive" style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.7)", cursor: "pointer" }}>Active (visible to customers)</label>
+        <input type="checkbox" id="isActive" name="isActive" defaultChecked={plan?.isActive ?? true} style={{ width: 16, height: 16, accentColor: "var(--sky)" }} />
+        <label htmlFor="isActive" style={{ fontSize: "0.85rem", color: "var(--text-muted)", cursor: "pointer" }}>Active (visible to customers)</label>
       </div>
 
       {/* Inclusions */}
@@ -121,25 +120,25 @@ export default function PlanForm({ plan, mode }: Props) {
         <label style={labelStyle}>What&apos;s Included</label>
         <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.4rem", marginBottom: "0.6rem" }}>
           <input value={newInclusion} onChange={(e) => setNewInclusion(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); if (newInclusion.trim()) { setInclusionList((p) => [...p, newInclusion.trim()]); setNewInclusion(""); } } }} style={{ ...inputStyle, marginTop: 0, flex: 1 }} placeholder="Add an inclusion and press Enter" />
-          <button type="button" onClick={() => { if (newInclusion.trim()) { setInclusionList((p) => [...p, newInclusion.trim()]); setNewInclusion(""); } }} style={{ background: "var(--gold)", border: "none", color: "#0d0d0d", padding: "0 1rem", fontSize: "1.2rem", cursor: "pointer" }}>+</button>
+          <button type="button" onClick={() => { if (newInclusion.trim()) { setInclusionList((p) => [...p, newInclusion.trim()]); setNewInclusion(""); } }} style={{ background: "var(--sky)", border: "none", color: "white", padding: "0 1rem", fontSize: "1.2rem", cursor: "pointer", borderRadius: 2 }}>+</button>
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
           {inclusionList.map((item, i) => (
-            <span key={i} style={{ background: "rgba(201,169,110,0.1)", border: "1px solid rgba(201,169,110,0.2)", color: "rgba(255,255,255,0.8)", padding: "0.3rem 0.75rem", fontSize: "0.82rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
+            <span key={i} style={{ background: "rgba(14,165,233,0.08)", border: "1px solid rgba(14,165,233,0.2)", color: "var(--sky-dark)", padding: "0.3rem 0.75rem", fontSize: "0.82rem", display: "flex", alignItems: "center", gap: "0.4rem", borderRadius: 20 }}>
               {item}
-              <button type="button" onClick={() => setInclusionList((p) => p.filter((_, j) => j !== i))} style={{ background: "none", border: "none", color: "#888", cursor: "pointer", fontSize: "1rem", lineHeight: 1 }}>×</button>
+              <button type="button" onClick={() => setInclusionList((p) => p.filter((_, j) => j !== i))} style={{ background: "none", border: "none", color: "var(--text-muted)", cursor: "pointer", fontSize: "1rem", lineHeight: 1 }}>×</button>
             </span>
           ))}
         </div>
       </div>
 
-      {error && <p style={{ gridColumn: "span 2", color: "#f87171", fontSize: "0.85rem" }}>{error}</p>}
+      {error && <p style={{ gridColumn: "span 2", color: "#dc2626", fontSize: "0.85rem" }}>{error}</p>}
 
       <div style={{ gridColumn: "span 2", display: "flex", gap: "1rem" }}>
-        <button type="submit" disabled={loading} style={{ background: "var(--gold)", color: "#0d0d0d", border: "none", padding: "0.85rem 2rem", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textTransform: "uppercase", cursor: loading ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
+        <button type="submit" disabled={loading} style={{ background: "var(--sky)", color: "white", border: "none", padding: "0.85rem 2rem", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.1em", textTransform: "uppercase", cursor: loading ? "not-allowed" : "pointer", fontFamily: "inherit", borderRadius: 2 }}>
           {loading ? "Saving…" : mode === "edit" ? "Save Changes" : "Create Plan"}
         </button>
-        <button type="button" onClick={() => router.back()} style={{ background: "none", border: "1px solid rgba(255,255,255,0.1)", color: "#888", padding: "0.85rem 2rem", fontSize: "0.85rem", cursor: "pointer", fontFamily: "inherit" }}>
+        <button type="button" onClick={() => router.back()} style={{ background: "none", border: "1px solid rgba(14,165,233,0.25)", color: "var(--text-muted)", padding: "0.85rem 2rem", fontSize: "0.85rem", cursor: "pointer", fontFamily: "inherit", borderRadius: 2 }}>
           Cancel
         </button>
       </div>
@@ -147,5 +146,5 @@ export default function PlanForm({ plan, mode }: Props) {
   );
 }
 
-const inputStyle: React.CSSProperties = { width: "100%", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "white", padding: "0.75rem 1rem", fontSize: "0.9rem", outline: "none", marginTop: "0.3rem", fontFamily: "inherit" };
-const labelStyle: React.CSSProperties = { fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#888", display: "block" };
+const inputStyle: React.CSSProperties = { width: "100%", background: "#f8fafc", border: "1px solid rgba(14,165,233,0.2)", color: "var(--text)", padding: "0.75rem 1rem", fontSize: "0.9rem", outline: "none", marginTop: "0.3rem", fontFamily: "inherit", borderRadius: 2 };
+const labelStyle: React.CSSProperties = { fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", display: "block" };

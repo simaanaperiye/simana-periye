@@ -18,8 +18,8 @@ export default function AddToCartButton({ plan }: Props) {
     <button
       onClick={handleAdd}
       style={{
-        background: added ? "var(--gold-dark)" : "var(--gold)",
-        color: "#0d0d0d", border: "none", padding: "0.9rem 2rem",
+        background: added ? "var(--sky-dark)" : "var(--sky)",
+        color: "white", border: "none", padding: "0.9rem 2rem",
         fontWeight: 600, fontSize: "0.82rem", letterSpacing: "0.12em",
         textTransform: "uppercase", cursor: "pointer", transition: "all 0.3s",
         fontFamily: "var(--font-inter), sans-serif",

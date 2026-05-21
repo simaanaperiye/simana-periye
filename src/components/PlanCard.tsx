@@ -16,7 +16,7 @@ export default function PlanCard({ plan }: { plan: TravelPlan }) {
   };
 
   return (
-    <div style={{ position: "relative", overflow: "hidden", cursor: "pointer", height: 300 }}
+    <div style={{ position: "relative", overflow: "hidden", cursor: "pointer", height: 300, borderRadius: 4 }}
       onMouseEnter={(e) => { (e.currentTarget.querySelector(".dest-img") as HTMLElement).style.transform = "scale(1.08)"; (e.currentTarget.querySelector(".dest-meta") as HTMLElement).style.opacity = "1"; (e.currentTarget.querySelector(".dest-meta") as HTMLElement).style.transform = "translateY(0)"; }}
       onMouseLeave={(e) => { (e.currentTarget.querySelector(".dest-img") as HTMLElement).style.transform = "scale(1)"; (e.currentTarget.querySelector(".dest-meta") as HTMLElement).style.opacity = "0"; (e.currentTarget.querySelector(".dest-meta") as HTMLElement).style.transform = "translateY(10px)"; }}
     >
@@ -24,26 +24,26 @@ export default function PlanCard({ plan }: { plan: TravelPlan }) {
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)" }} />
 
       {plan.badge && (
-        <span style={{ position: "absolute", top: "1.2rem", right: "1.2rem", background: "var(--gold)", color: "#0d0d0d", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.35rem 0.75rem" }}>
+        <span style={{ position: "absolute", top: "1.2rem", right: "1.2rem", background: "var(--sky)", color: "white", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "0.35rem 0.75rem", borderRadius: 2 }}>
           {plan.badge}
         </span>
       )}
 
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "1.6rem" }}>
-        <div style={{ fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.3rem" }}>{plan.region}</div>
+        <div style={{ fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--sky-light)", marginBottom: "0.3rem" }}>{plan.region}</div>
         <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.55rem", fontWeight: 400, color: "white", lineHeight: 1.1 }}>{plan.title}</div>
         <div className="dest-meta" style={{ opacity: 0, transform: "translateY(10px)", transition: "all 0.4s 0.1s", display: "flex", gap: "1rem", marginTop: "0.8rem", alignItems: "flex-end", justifyContent: "space-between" }}>
           <div>
             <div style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.6)" }}>{plan.duration} Days · Up to {plan.maxPeople} people</div>
-            <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", color: "var(--gold)", marginTop: "0.2rem" }}>
+            <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", color: "var(--sky-light)", marginTop: "0.2rem" }}>
               ₹{plan.price.toLocaleString("en-IN")}
             </div>
           </div>
           <div style={{ display: "flex", gap: "0.5rem" }}>
-            <Link href={`/plans/${plan.id}`} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "white", padding: "0.45rem 0.9rem", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", backdropFilter: "blur(4px)" }}>
+            <Link href={`/plans/${plan.id}`} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "white", padding: "0.45rem 0.9rem", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", backdropFilter: "blur(4px)", borderRadius: 2 }}>
               View
             </Link>
-            <button onClick={handleAdd} style={{ background: added ? "var(--gold-dark)" : "var(--gold)", border: "none", color: "#0d0d0d", padding: "0.45rem 0.9rem", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", fontFamily: "inherit" }}>
+            <button onClick={handleAdd} style={{ background: added ? "var(--sky-dark)" : "var(--sky)", border: "none", color: "white", padding: "0.45rem 0.9rem", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", fontFamily: "inherit", borderRadius: 2 }}>
               {added ? "✓" : "+ Cart"}
             </button>
           </div>
