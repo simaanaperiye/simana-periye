@@ -43,8 +43,9 @@ export default function Navbar() {
         backdropFilter: scrolled || menuOpen ? "blur(20px)" : "none",
         boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.08), 0 2px 12px rgba(0,0,0,0.06)" : "none",
       }}>
-        <Link href="/" style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.7rem", fontWeight: 600, letterSpacing: "0.04em", color: onHero ? "white" : "#0f172a", textDecoration: "none", transition: "color 0.4s" }}>
-          Simana<span style={{ color: "var(--sky)" }}> Periye</span>
+        <Link href="/" style={{ fontFamily: "var(--font-cormorant)", fontSize: "2rem", fontWeight: 700, letterSpacing: "0.05em", textDecoration: "none", transition: "all 0.4s", textShadow: onHero ? "0 2px 12px rgba(0,0,0,0.35)" : "none", display: "flex", alignItems: "baseline", gap: "0.3rem" }}>
+          <span style={{ color: onHero ? "white" : "#0f172a", transition: "color 0.4s" }}>Simana</span>
+          <em style={{ color: onHero ? "rgba(255,255,255,0.85)" : "#555", fontStyle: "italic", fontWeight: 300, fontSize: "1.85rem" }}>Periye</em>
         </Link>
 
         {/* Desktop nav links */}
