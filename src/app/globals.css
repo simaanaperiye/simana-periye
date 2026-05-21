@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #c9a96e;
+  --gold-light: #e8d5b0;
+  --gold-dark: #9a7a4a;
+  --dark: #0d0d0d;
+  --dark2: #181818;
+  --dark3: #242424;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--dark); color: white; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--dark2); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.anim-fade-up-1 { opacity: 0; animation: fadeUp 0.8s 0.3s forwards; }
+.anim-fade-up-2 { opacity: 0; animation: fadeUp 0.8s 0.5s forwards; }
+.anim-fade-up-3 { opacity: 0; animation: fadeUp 0.8s 0.7s forwards; }
+.anim-fade-up-4 { opacity: 0; animation: fadeUp 0.8s 0.9s forwards; }
+.anim-fade-up-5 { opacity: 0; animation: fadeUp 0.8s 1.1s forwards; }
+.anim-fade-in  { opacity: 0; animation: fadeIn 1s 2s forwards; }
+.scroll-line { animation: scrollPulse 1.5s infinite; }
+.cart-panel { animation: slideIn 0.3s ease; }
