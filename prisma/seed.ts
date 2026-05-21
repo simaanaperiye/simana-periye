@@ -7,9 +7,9 @@ async function main() {
   // Admin user
   const hashed = await bcrypt.hash("admin123", 10);
   await prisma.adminUser.upsert({
-    where: { email: "admin@wanderlust.travel" },
+    where: { email: "admin@simanaperiye.travel" },
     update: {},
-    create: { email: "admin@wanderlust.travel", password: hashed, name: "Admin" },
+    create: { email: "admin@simanaperiye.travel", password: hashed, name: "Admin" },
   });
 
   // Travel plans
@@ -95,7 +95,7 @@ async function main() {
     await prisma.travelPlan.create({ data: plan });
   }
 
-  console.log("✅ Seed complete — admin: admin@wanderlust.travel / admin123");
+  console.log("✅ Seed complete — admin: admin@simanaperiye.travel / admin123");
 }
 
 main()
