@@ -12,6 +12,11 @@ async function main() {
     create: { email: "admin@simanaperiye.travel", password: hashed, name: "Admin" },
   });
 
+  // Clear existing plans to avoid duplicates on re-seed
+  await prisma.orderItem.deleteMany({});
+  await prisma.order.deleteMany({});
+  await prisma.travelPlan.deleteMany({});
+
   // Travel plans
   const plans = [
     {
@@ -23,7 +28,7 @@ async function main() {
       price: 45000,
       duration: 7,
       maxPeople: 15,
-      imageUrl: "https://images.unsplash.com/photo-1566837945700-30057527ade0?w=900&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=900&q=80",
       badge: "Bestseller",
       inclusions: JSON.stringify(["Houseboat accommodation", "All meals", "Shikara ride", "Gulmarg day trip", "Airport transfers", "Local guide"]),
       departureDate: new Date("2026-06-15"),
@@ -91,9 +96,7 @@ async function main() {
     },
   ];
 
-  for (const plan of plans) {
-    await prisma.travelPlan.create({ data: plan });
-  }
+  await prisma.travelPlan.createMany({ data: plans });
 
   console.log("✅ Seed complete — admin: admin@simanaperiye.travel / admin123");
 }
