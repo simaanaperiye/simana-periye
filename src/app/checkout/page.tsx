@@ -3,9 +3,6 @@ import Navbar from "@/components/Navbar";
 import { useCart } from "@/components/CartProvider";
 import Link from "next/link";
 import { useState } from "react";
-import { loadStripe } from "@stripe/stripe-js";
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 export default function CheckoutPage() {
   const { items, total } = useCart();
@@ -29,9 +26,7 @@ export default function CheckoutPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to create checkout session");
 
-      const stripe = await stripePromise;
-      if (!stripe) throw new Error("Stripe not loaded");
-      await stripe.redirectToCheckout({ sessionId: data.sessionId });
+      window.location.href = data.url;
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : "Something went wrong");
       setLoading(false);

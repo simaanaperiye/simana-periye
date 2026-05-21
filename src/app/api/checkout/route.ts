@@ -61,5 +61,5 @@ export async function POST(req: NextRequest) {
   // Save session ID
   await prisma.order.update({ where: { id: order.id }, data: { stripeSessionId: session.id } });
 
-  return NextResponse.json({ sessionId: session.id });
+  return NextResponse.json({ sessionId: session.id, url: session.url });
 }
