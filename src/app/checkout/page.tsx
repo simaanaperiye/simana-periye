@@ -24,9 +24,9 @@ export default function CheckoutPage() {
         body: JSON.stringify({ items, customerName: name, customerEmail: email }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to create checkout session");
+      if (!res.ok) throw new Error(data.error || "Failed to place booking");
 
-      window.location.href = data.url;
+      window.location.href = "/checkout/success";
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : "Something went wrong");
       setLoading(false);
@@ -38,9 +38,9 @@ export default function CheckoutPage() {
       <Navbar />
       <div style={{ minHeight: "100vh", padding: "120px 5% 6rem", maxWidth: 960, margin: "0 auto" }}>
         <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 300, marginBottom: "0.5rem", color: "var(--text)" }}>
-          Secure <em style={{ fontStyle: "italic", color: "var(--sky)" }}>Checkout</em>
+          Confirm Your <em style={{ fontStyle: "italic", color: "var(--sky)" }}>Booking</em>
         </h1>
-        <p style={{ color: "var(--text-muted)", marginBottom: "3rem", fontSize: "0.9rem" }}>Review your booking and complete payment via Stripe.</p>
+        <p style={{ color: "var(--text-muted)", marginBottom: "3rem", fontSize: "0.9rem" }}>Review your trip selection and submit your booking request.</p>
 
         {items.length === 0 ? (
           <div style={{ textAlign: "center", padding: "6rem 0" }}>
@@ -82,18 +82,18 @@ export default function CheckoutPage() {
               {error && <p style={{ color: "#dc2626", fontSize: "0.88rem", padding: "0.8rem", background: "rgba(220,38,38,0.06)", border: "1px solid rgba(220,38,38,0.15)", borderRadius: 4 }}>{error}</p>}
 
               <div style={{ background: "rgba(14,165,233,0.05)", border: "1px solid rgba(14,165,233,0.15)", padding: "1rem 1.5rem", fontSize: "0.82rem", color: "var(--text-muted)", display: "flex", gap: "0.6rem", alignItems: "flex-start", borderRadius: 4 }}>
-                <span style={{ color: "var(--sky)", fontSize: "1rem" }}>🔒</span>
-                Payment is processed securely by Stripe. We never store your card details.
+                <span style={{ color: "var(--sky)", fontSize: "1rem" }}>✉️</span>
+                Our travel experts will contact you within 24 hours to confirm your booking and arrange payment.
               </div>
 
               <button type="submit" disabled={loading} style={{ background: loading ? "var(--sky-dark)" : "var(--sky)", color: "white", border: "none", padding: "1rem 2.5rem", fontWeight: 700, fontSize: "0.85rem", letterSpacing: "0.12em", textTransform: "uppercase", cursor: loading ? "not-allowed" : "pointer", transition: "all 0.3s", fontFamily: "inherit", borderRadius: 2 }}>
-                {loading ? "Redirecting to Stripe…" : `Pay ₹${total.toLocaleString("en-IN")} Securely`}
+                {loading ? "Confirming Booking…" : `Request Booking — ₹${total.toLocaleString("en-IN")}`}
               </button>
             </form>
 
             {/* Summary sidebar */}
             <div className="sticky-sidebar" style={{ background: "white", border: "1px solid rgba(0,0,0,0.1)", padding: "2rem", borderRadius: 4, boxShadow: "0 4px 20px rgba(0,0,0,0.06)" }}>
-              <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", fontWeight: 400, marginBottom: "1.5rem", color: "var(--text)" }}>Order Summary</h3>
+              <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", fontWeight: 400, marginBottom: "1.5rem", color: "var(--text)" }}>Booking Summary</h3>
               {items.map((item) => (
                 <div key={item.planId} style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.7rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
                   <span style={{ maxWidth: "65%", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{item.title} ×{item.quantity}</span>
@@ -113,7 +113,7 @@ export default function CheckoutPage() {
                 </div>
               </div>
               <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: "1.2rem", lineHeight: 1.7 }}>
-                By completing your purchase you agree to our Terms of Service and Cancellation Policy.
+                By submitting this request you agree to our Terms of Service and Cancellation Policy.
               </p>
             </div>
           </div>

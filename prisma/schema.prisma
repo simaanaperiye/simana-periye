@@ -32,13 +32,11 @@ model TravelPlan {
 }
 
 model Order {
-  id              String      @id @default(cuid())
-  customerName    String
-  customerEmail   String
-  totalAmount     Float
-  stripeSessionId String?     @unique
-  stripePaymentId String?
-  status          String      @default("pending")
+  id            String      @id @default(cuid())
+  customerName  String
+  customerEmail String
+  totalAmount   Float
+  status        String      @default("confirmed")
   createdAt       DateTime    @default(now())
   items           OrderItem[]
 }
