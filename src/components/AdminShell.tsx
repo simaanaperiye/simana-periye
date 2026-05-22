@@ -22,10 +22,10 @@ export default function AdminShell({ name, children }: { name: string; children:
       {/* Sidebar */}
       <aside style={{ width: 240, background: "#0f172a", borderRight: "1px solid rgba(14,165,233,0.15)", display: "flex", flexDirection: "column", flexShrink: 0 }}>
         <div style={{ padding: "1.5rem 1.5rem 1rem" }}>
-          <Link href="/" style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", fontWeight: 600, color: "white", textDecoration: "none" }}>
-            Simana<span style={{ color: "var(--sky)" }}> Periye</span>
+          <Link href="/" style={{ textDecoration: "none", display: "inline-block" }}>
+            <img src="/logo.png" alt="Simana Periye" style={{ height: 48, width: "auto", filter: "brightness(0) invert(1)" }} />
           </Link>
-          <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.35)", marginTop: "0.2rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>Admin</p>
+          <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.35)", marginTop: "0.4rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>Admin Panel</p>
         </div>
 
         <nav style={{ flex: 1, padding: "0.5rem 0.75rem" }}>

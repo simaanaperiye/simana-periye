@@ -32,8 +32,8 @@ export default function AdminLogin() {
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem", background: "#f0f9ff" }}>
       <div style={{ width: "100%", maxWidth: 400 }}>
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-          <Link href="/" style={{ fontFamily: "var(--font-cormorant)", fontSize: "2.2rem", fontWeight: 400, textDecoration: "none", color: "var(--text)", display: "block", marginBottom: "0.4rem" }}>
-            Simana<span style={{ color: "var(--sky)" }}> Periye</span>
+          <Link href="/" style={{ textDecoration: "none", display: "inline-block", marginBottom: "0.4rem" }}>
+            <img src="/logo.png" alt="Simana Periye" style={{ height: 72, width: "auto" }} />
           </Link>
           <p style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>Admin Dashboard</p>
         </div>

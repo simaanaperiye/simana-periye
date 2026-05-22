@@ -98,8 +98,8 @@ export default async function Home() {
       <footer style={{ background: "#f8fafc", padding: "4rem 5% 2rem", borderTop: "2px solid #e0f2fe" }}>
         <div className="footer-grid">
           <div>
-            <Link href="/" style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.7rem", fontWeight: 600, color: "var(--text)", textDecoration: "none", display: "block", marginBottom: "1rem" }}>
-              Simana<span style={{ color: "var(--sky)" }}> Periye</span>
+            <Link href="/" style={{ textDecoration: "none", display: "inline-block", marginBottom: "1rem" }}>
+              <img src="/logo.png" alt="Simana Periye" style={{ height: 64, width: "auto" }} />
             </Link>
             <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.8 }}>
               Crafting extraordinary journeys for curious souls since 2012.
