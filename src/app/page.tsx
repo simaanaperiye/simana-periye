@@ -54,7 +54,7 @@ export default async function Home() {
       </div>
 
       {/* ── DESTINATIONS ── */}
-      <section id="destinations" style={{ padding: "7rem 5%", background: "#ffffff" }}>
+      <section id="destinations" style={{ padding: "7rem 5%", background: "#ffffff", scrollMarginTop: "80px" }}>
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <span style={eyebrow}>Handpicked for You</span>
           <h2 style={sectionTitle}>Popular <em style={{ fontStyle: "italic", color: "var(--sky)" }}>Destinations</em></h2>
@@ -67,7 +67,7 @@ export default async function Home() {
       </section>
 
       {/* ── WHY ── */}
-      <section id="why" style={{ padding: "7rem 5%", background: "#f0f9ff" }}>
+      <section id="why" style={{ padding: "7rem 5%", background: "#f0f9ff", scrollMarginTop: "80px" }}>
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <span style={eyebrow}>Why Simana Periye</span>
           <h2 style={sectionTitle}>Travel the Way It <em style={{ fontStyle: "italic", color: "var(--sky)" }}>Should Be</em></h2>
@@ -77,7 +77,7 @@ export default async function Home() {
       </section>
 
       {/* ── CTA — sky gradient overlay on photo ── */}
-      <section id="contact" style={{ position: "relative", padding: "8rem 5%", textAlign: "center", overflow: "hidden" }}>
+      <section id="contact" style={{ position: "relative", padding: "8rem 5%", textAlign: "center", overflow: "hidden", scrollMarginTop: "80px" }}>
         <div style={{ position: "absolute", inset: 0, background: `url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80') center/cover no-repeat` }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.75)" }} />
         <div style={{ position: "relative", zIndex: 1 }}>
