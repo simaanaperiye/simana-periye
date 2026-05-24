@@ -88,8 +88,8 @@ export default async function Home() {
             Let our experts craft the perfect itinerary. No cookie-cutter packages — pure personalised adventure.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="mailto:hello@simanaperiye.travel" style={ctaPrimaryBtn}>Contact Us Today</a>
-            <a href="tel:+919876543210" style={ctaSecondaryBtn}>Call +91 98765 43210</a>
+            <a href="mailto:simanaperiyet@gmail.com" style={ctaPrimaryBtn}>Contact Us Today</a>
+            <a href="tel:+919903149484" style={ctaSecondaryBtn}>Call +91 99031 49484</a>
           </div>
         </div>
       </section>
