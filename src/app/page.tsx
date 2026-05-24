@@ -115,7 +115,7 @@ export default async function Home() {
           </div>
           <div>
             <h4 style={{ fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--sky-dark)", marginBottom: "1.2rem" }}>Contact</h4>
-            <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.8 }}>hello@simanaperiye.travel<br />+91 98765 43210<br />New Delhi, India</p>
+            <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.8 }}>simanaperiyet@gmail.com<br />+91 99031 49484<br />+91 70038 56019<br />Kolkata, India</p>
           </div>
         </div>
         <div style={{ borderTop: "1px solid #e0f2fe", paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
