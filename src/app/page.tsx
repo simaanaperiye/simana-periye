@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import { prisma } from "@/lib/prisma";
 import PlanCard from "@/components/PlanCard";
 import WhyCards from "@/components/WhyCards";
+import Gallery from "@/components/Gallery";
 
 export const dynamic = "force-dynamic";
 
@@ -64,6 +65,17 @@ export default async function Home() {
         <div className="dest-grid">
           {plans.map((plan) => <PlanCard key={plan.id} plan={plan} />)}
         </div>
+      </section>
+
+      {/* ── GALLERY ── */}
+      <section id="gallery" style={{ padding: "7rem 5%", background: "#f8fafc", scrollMarginTop: "80px" }}>
+        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <span style={eyebrow}>Our Journeys</span>
+          <h2 style={sectionTitle}>Travel <em style={{ fontStyle: "italic", color: "var(--sky)" }}>Gallery</em></h2>
+          <p style={sectionDesc}>Real moments from our tours — Nepal, Pokhara, Kathmandu, Chitwan and beyond.</p>
+          <div style={{ width: 40, height: 2, background: "var(--sky)", margin: "1.5rem auto 0", borderRadius: 1 }} />
+        </div>
+        <Gallery />
       </section>
 
       {/* ── WHY ── */}
