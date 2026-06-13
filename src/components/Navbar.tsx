@@ -26,7 +26,8 @@ export default function Navbar() {
 
   const navLinks: [string, string][] = [
     ["Destinations", "#destinations"],
-    ["Gallery", "#gallery"],
+    ["Gallery", "/gallery"],
+    ["Itinerary", "/itinerary"],
     ["About", "#why"],
     ["Contact", "#contact"],
   ];
