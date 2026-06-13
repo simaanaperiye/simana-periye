@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useCart } from "./CartProvider";
 import CartDrawer from "./CartDrawer";
 
@@ -9,6 +10,10 @@ export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { count } = useCart();
+  const pathname = usePathname();
+
+  // On non-homepage pages, always show solid navbar (no transparent hero mode)
+  const isHomepage = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => {
@@ -19,17 +24,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onHero = !scrolled && !menuOpen;
+  const onHero = isHomepage && !scrolled && !menuOpen;
   const linkColor = onHero ? "rgba(255,255,255,0.85)" : "rgba(15,23,42,0.7)";
   const linkHover = onHero ? "#ffffff" : "#0f172a";
-  const iconColor = onHero ? "white" : "#0f172a";
 
+  // Hash links prefixed with / so they work from any page
   const navLinks: [string, string][] = [
-    ["Destinations", "#destinations"],
+    ["Destinations", "/#destinations"],
     ["Gallery", "/gallery"],
     ["Itinerary", "/itinerary"],
-    ["About", "#why"],
-    ["Contact", "#contact"],
+    ["About", "/#why"],
+    ["Contact", "/#contact"],
   ];
 
   return (
@@ -40,9 +45,9 @@ export default function Navbar() {
         display: "flex", alignItems: "center", justifyContent: "space-between",
         padding: "0 5%",
         transition: "background 0.4s, box-shadow 0.4s",
-        background: scrolled || menuOpen ? "rgba(255,255,255,0.97)" : "transparent",
-        backdropFilter: scrolled || menuOpen ? "blur(20px)" : "none",
-        boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.08), 0 2px 12px rgba(0,0,0,0.06)" : "none",
+        background: !onHero || menuOpen ? "rgba(255,255,255,0.97)" : "transparent",
+        backdropFilter: !onHero || menuOpen ? "blur(20px)" : "none",
+        boxShadow: !onHero ? "0 1px 0 rgba(0,0,0,0.08), 0 2px 12px rgba(0,0,0,0.06)" : "none",
       }}>
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
           <img
