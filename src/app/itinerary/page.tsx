@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import BookTourButton from "@/components/BookTourButton";
 
 const days = [
   {
@@ -110,9 +111,14 @@ export default function ItineraryPage() {
           ))}
         </div>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <a href="mailto:simanaperiyet@gmail.com" style={{ background: "#3b82f6", color: "white", padding: "0.85rem 2.5rem", fontWeight: 600, fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", borderRadius: 2 }}>
-            Book This Tour
-          </a>
+          <BookTourButton
+            planId="nepal-muktinath-2026"
+            title="Nepal with Muktinath Darshan"
+            destination="Nepal"
+            imageUrl="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=900&q=80"
+            price={22000}
+            duration={9}
+          />
           <a href="tel:+919903149484" style={{ background: "rgba(255,255,255,0.08)", color: "white", padding: "0.85rem 2.5rem", fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", borderRadius: 2, border: "1px solid rgba(255,255,255,0.15)" }}>
             Call +91 99031 49484
           </a>
@@ -208,9 +214,14 @@ export default function ItineraryPage() {
             <p style={{ fontSize: "0.75rem", color: "#94a3b8", marginTop: "0.5rem" }}>MSME: UDYAM-WB-10-0185262 &nbsp;|&nbsp; GST: 19AORPA8912NIZA &nbsp;|&nbsp; CE No: 0046 1710 2116</p>
           </div>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <a href="mailto:simanaperiyet@gmail.com" style={{ background: "var(--sky)", color: "white", padding: "0.8rem 2rem", fontWeight: 600, fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", borderRadius: 2 }}>
-              Book Now
-            </a>
+            <BookTourButton
+              planId="nepal-muktinath-2026"
+              title="Nepal with Muktinath Darshan"
+              destination="Nepal"
+              imageUrl="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=900&q=80"
+              price={22000}
+              duration={9}
+            />
             <Link href="/#destinations" style={{ background: "transparent", color: "#0f172a", padding: "0.8rem 2rem", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", border: "1px solid #e2e8f0", textDecoration: "none", borderRadius: 2 }}>
               All Tours
             </Link>
