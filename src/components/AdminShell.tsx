@@ -23,7 +23,7 @@ export default function AdminShell({ name, children }: { name: string; children:
       <aside style={{ width: 240, background: "#0f172a", borderRight: "1px solid rgba(14,165,233,0.15)", display: "flex", flexDirection: "column", flexShrink: 0 }}>
         <div style={{ padding: "1.5rem 1.5rem 1rem" }}>
           <Link href="/" style={{ textDecoration: "none", display: "inline-block" }}>
-            <img src="/logo.png" alt="Simana Periye" style={{ height: 48, width: "auto", filter: "brightness(0) invert(1)" }} />
+            <img src="/logo.jpeg" alt="Simana Periye" style={{ height: 48, width: "auto", background: "rgba(255,255,255,0.9)", borderRadius: 6, padding: "2px 8px" }} />
           </Link>
           <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.35)", marginTop: "0.4rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>Admin Panel</p>
         </div>

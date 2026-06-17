@@ -33,7 +33,7 @@ export default function AdminLogin() {
       <div style={{ width: "100%", maxWidth: 400 }}>
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
           <Link href="/" style={{ textDecoration: "none", display: "inline-block", marginBottom: "0.4rem" }}>
-            <img src="/logo.png" alt="Simana Periye" style={{ height: 72, width: "auto" }} />
+            <img src="/logo.jpeg" alt="Simana Periye" style={{ height: 72, width: "auto" }} />
           </Link>
           <p style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>Admin Dashboard</p>
         </div>

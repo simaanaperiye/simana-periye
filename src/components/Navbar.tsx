@@ -50,16 +50,19 @@ export default function Navbar() {
         boxShadow: !onHero ? "0 1px 0 rgba(0,0,0,0.08), 0 2px 12px rgba(0,0,0,0.06)" : "none",
       }}>
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
-          <img
-            src="/logo.png"
-            alt="Simana Periye"
-            style={{
-              height: 56,
-              width: "auto",
-              transition: "filter 0.4s",
-              filter: onHero ? "brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.4))" : "none",
-            }}
-          />
+          <div style={{
+            background: onHero ? "rgba(255,255,255,0.92)" : "transparent",
+            borderRadius: onHero ? 8 : 0,
+            padding: onHero ? "3px 10px" : 0,
+            transition: "all 0.4s",
+            backdropFilter: onHero ? "blur(8px)" : "none",
+          }}>
+            <img
+              src="/logo.jpeg"
+              alt="Simana Periye"
+              style={{ height: 52, width: "auto", display: "block" }}
+            />
+          </div>
         </Link>
 
         {/* Desktop nav links */}

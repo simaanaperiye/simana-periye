@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  /* Accent palette */
-  --sky: #111111;
-  --sky-light: #333333;
-  --sky-pale: #e8e8e8;
-  --sky-pale2: #f5f5f5;
-  --sky-dark: #000000;
-  --sky-deep: #000000;
+  /* Teal-navy palette — matches Simana Periye logo */
+  --sky: #3aada8;
+  --sky-light: #52bfba;
+  --sky-pale: #e0f5f4;
+  --sky-pale2: #f0fafa;
+  --sky-dark: #1e3a5f;
+  --sky-deep: #152b47;
 
-  /* Backward-compat aliases so existing var(--gold) / var(--dark) usages auto-update */
-  --gold: #111111;
-  --gold-light: #333333;
-  --gold-dark: #000000;
+  /* Backward-compat aliases */
+  --gold: #3aada8;
+  --gold-light: #52bfba;
+  --gold-dark: #1e3a5f;
   --dark: #ffffff;
-  --dark2: #f0f9ff;
-  --dark3: #e0f2fe;
+  --dark2: #f0fafa;
+  --dark3: #e0f5f4;
 
   /* Text */
   --text: #0f172a;

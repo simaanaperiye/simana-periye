@@ -99,7 +99,7 @@ export default async function Home() {
         <div className="footer-grid">
           <div>
             <Link href="/" style={{ textDecoration: "none", display: "inline-block", marginBottom: "1rem" }}>
-              <img src="/logo.png" alt="Simana Periye" style={{ height: 64, width: "auto" }} />
+              <img src="/logo.jpeg" alt="Simana Periye" style={{ height: 64, width: "auto" }} />
             </Link>
             <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.8 }}>
               Crafting extraordinary journeys for curious souls since 2012.
