@@ -4,6 +4,13 @@ import { useCart } from "./CartProvider";
 import { useState } from "react";
 import type { TravelPlan } from "@prisma/client";
 
+// Plans that have a dedicated itinerary section
+const itineraryMap: Record<string, string> = {
+  "plan-kashmir":   "/itinerary#kashmir",
+  "plan-muktinath": "/itinerary#muktinath",
+  "plan-keonjhar":  "/itinerary#keonjhar",
+};
+
 export default function PlanCard({ plan }: { plan: TravelPlan }) {
   const { add } = useCart();
   const [added, setAdded] = useState(false);
@@ -14,6 +21,8 @@ export default function PlanCard({ plan }: { plan: TravelPlan }) {
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
+
+  const itineraryHref = itineraryMap[plan.id];
 
   return (
     <div style={{ position: "relative", overflow: "hidden", cursor: "pointer", height: 300, borderRadius: 4 }}
@@ -36,10 +45,15 @@ export default function PlanCard({ plan }: { plan: TravelPlan }) {
           <div>
             <div style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.6)" }}>{plan.duration} Days · Up to {plan.maxPeople} people</div>
             <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.4rem", color: "var(--sky-light)", marginTop: "0.2rem" }}>
-              ₹{plan.price.toLocaleString("en-IN")}
+              ₹{plan.price.toLocaleString("en-IN")}<span style={{ fontSize: "0.75rem", fontWeight: 400, color: "rgba(255,255,255,0.5)" }}>/person</span>
             </div>
           </div>
-          <div style={{ display: "flex", gap: "0.5rem" }}>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "flex-end" }}>
+            {itineraryHref && (
+              <a href={itineraryHref} style={{ background: "rgba(58,173,168,0.25)", border: "1px solid rgba(58,173,168,0.6)", color: "white", padding: "0.45rem 0.9rem", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", backdropFilter: "blur(4px)", borderRadius: 2 }}>
+                Itinerary
+              </a>
+            )}
             <Link href={`/plans/${plan.id}`} style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)", color: "white", padding: "0.45rem 0.9rem", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", backdropFilter: "blur(4px)", borderRadius: 2 }}>
               View
             </Link>
