@@ -16,7 +16,7 @@ const tours = [
     route: "Raxaul · Pokhara · Jomsom · Muktinath · Kathmandu · Bhaktapur · Nagarkot",
     price: 22000,
     duration: 9,
-    departure: "06 Nov 2026",
+    departure: "16 Oct 2026 & 06 Nov 2026",
     imageUrl: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=900&q=80",
     days: [
       { day: 1, title: "Raxaul → Birgunj → Pokhara", desc: "Arrive at Raxaul / Birgunj, freshen up, have breakfast and lunch, then transfer to Pokhara. Check in and overnight stay." },
@@ -89,7 +89,7 @@ const tours = [
     route: "Ranchi · Jonha · Dassam Falls · Netarhat · Lodh Falls · Patratu Valley",
     price: 10999,
     duration: 4,
-    departure: "Departures on Request",
+    departure: "31 Jul 2026",
     imageUrl: "/gallery/ranchi/ranchi-01.jpg",
     days: [
       { day: 1, title: "Arrival at Ranchi & Local Sightseeing", desc: "Pick up from Ranchi railway station. Check in to hotel, freshen up and have breakfast. After lunch, proceed for sightseeing — Jonha Falls (also known as Gautamdhara) and Sita Falls. Return to hotel for dinner and overnight stay." },
@@ -111,7 +111,7 @@ const tours = [
     route: "Guwahati · Shergaon · Dirang · Tawang · Bumla Pass · Bomdila · Guwahati",
     price: 22000,
     duration: 7,
-    departure: "Departures on Request",
+    departure: "16 Oct 2026",
     imageUrl: "/gallery/arunachal/arunachal-09.jpg",
     days: [
       { day: 1, title: "Guwahati → Shergaon", desc: "May offer puja at Kamakhya Mandir (if time permits). Proceed towards Shergaon through the stunning Assam countryside — enjoy the beauty of lush tea gardens and the vast Brahmaputra river view. Lunch en route. Arrive Shergaon, check in, dinner and overnight stay." },

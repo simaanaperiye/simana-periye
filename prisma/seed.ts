@@ -64,7 +64,7 @@ async function main() {
       imageUrl: "/gallery/arunachal/arunachal-09.jpg",
       badge: "Popular",
       inclusions: JSON.stringify(["Deluxe accommodation", "Tempo traveller throughout", "All meals", "Experienced driver & guide", "Efficient tour manager", "1L mineral water per day", "All parking, permits, taxes & toll", "Bumla Pass (Complimentary)"]),
-      departureDate: null,
+      departureDate: new Date("2026-10-16"),
       isActive: true,
     },
     {
@@ -160,7 +160,7 @@ async function main() {
       imageUrl: "/gallery/ranchi/ranchi-01.jpg",
       badge: "New",
       inclusions: JSON.stringify(["Family-wise AC accommodation", "AC traveller", "Sightseeing vehicle", "All meals", "All taxes, toll & driver charges", "1L mineral water per day", "Experienced tour manager"]),
-      departureDate: null,
+      departureDate: new Date("2026-07-31"),
       isActive: true,
     },
   ];
