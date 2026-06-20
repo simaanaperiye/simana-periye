@@ -3,6 +3,7 @@ import { useState, useCallback } from "react";
 
 const ranchFiles = Array.from({ length: 18 }, (_, i) => `/gallery/ranchi/ranchi-${String(i + 1).padStart(2, "0")}.jpg`);
 const arunachalFiles = Array.from({ length: 21 }, (_, i) => `/gallery/arunachal/arunachal-${String(i + 1).padStart(2, "0")}.jpg`);
+const keonjharFiles = Array.from({ length: 10 }, (_, i) => `/gallery/keonjhar/keonjhar-${String(i + 1).padStart(2, "0")}.jpg`);
 
 const albums = [
   {
@@ -11,6 +12,7 @@ const albums = [
     folder: "",
     files: [
       ...arunachalFiles,
+      ...keonjharFiles,
       ...ranchFiles,
       ...["IMG-20260321-WA0040","IMG-20260321-WA0041","IMG-20260321-WA0042","IMG-20260321-WA0045"].map(f => `/gallery/chitwan/${f}.jpg`),
       ...["IMG-20260105-WA0015","IMG-20260105-WA0045","IMG-20260105-WA0046","IMG-20260105-WA0047","IMG-20260105-WA0048","IMG-20260105-WA0049","IMG-20260105-WA0050","IMG-20260105-WA0051","IMG-20260105-WA0052","IMG-20260105-WA0054","IMG-20260105-WA0055","IMG-20260105-WA0056","IMG-20260105-WA0057","IMG-20260105-WA0058","IMG-20260105-WA0062","IMG-20260105-WA0063","IMG-20260105-WA0065","IMG-20260105-WA0067","IMG-20260105-WA0068"].map(f => `/gallery/nepal-group-tour/${f}.jpg`),
@@ -24,6 +26,11 @@ const albums = [
     key: "arunachal",
     label: "Arunachal Pradesh",
     files: arunachalFiles,
+  },
+  {
+    key: "keonjhar",
+    label: "Keonjhar",
+    files: keonjharFiles,
   },
   {
     key: "ranchi",

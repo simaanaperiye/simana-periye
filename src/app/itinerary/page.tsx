@@ -68,7 +68,7 @@ const tours = [
     price: 9000,
     duration: 4,
     departure: "23 Jul 2026",
-    imageUrl: "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=900&q=80",
+    imageUrl: "/gallery/keonjhar/keonjhar-03.jpg",
     days: [
       { day: 1, title: "Kolkata → Keonjhar", desc: "Depart from Behala, Kolkata at around 7:30 AM by tempo traveller. Breakfast and lunch on the way. Arrive Keonjhar in the evening. Check in to hotel. Overnight stay." },
       { day: 2, title: "Khandahar Falls & Gonasika", desc: "After breakfast, visit the spectacular Khandahar Waterfalls. Visit Gonasika if time permits. Lunch on the way. Back to hotel in the evening. Dinner and overnight stay." },

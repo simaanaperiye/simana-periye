@@ -141,7 +141,7 @@ async function main() {
       price: 9000,
       duration: 4,
       maxPeople: 20,
-      imageUrl: "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=900&q=80",
+      imageUrl: "/gallery/keonjhar/keonjhar-03.jpg",
       badge: "New",
       inclusions: JSON.stringify(["AC accommodation", "Tempo traveller (Kolkata–Kolkata)", "All meals (own kitchen)", "All toll, driver charges & taxes", "Efficient manager"]),
       departureDate: new Date("2026-07-23"),
