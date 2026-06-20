@@ -79,6 +79,28 @@ const tours = [
     exclusions: ["Personal expenses", "Cost from natural calamities, road blockage etc.", "Medical emergency costs", "Laundry, telephone charges, room service", "Porterage, tips", "Extra luxury at hotels, extra food, extra car", "Entry fees", "Anything not mentioned in inclusions"],
     specialities: ["All meals by own kitchen staff", "Tempo traveller — door to door from Kolkata", "Offbeat & hidden waterfalls itinerary", "Special care for kids & senior citizens"],
   },
+
+  /* ── 4. Ranchi · Netarhat · Patratu ── */
+  {
+    id: "ranchi",
+    planId: "plan-ranchi",
+    title: "Ranchi · Netarhat · Patratu Explorer",
+    subtitle: "4 Days · 3 Nights",
+    route: "Ranchi · Jonha · Dassam Falls · Netarhat · Lodh Falls · Patratu Valley",
+    price: 10999,
+    duration: 4,
+    departure: "Departures on Request",
+    imageUrl: "/gallery/ranchi/ranchi-01.jpg",
+    days: [
+      { day: 1, title: "Arrival at Ranchi & Local Sightseeing", desc: "Pick up from Ranchi railway station. Check in to hotel, freshen up and have breakfast. After lunch, proceed for sightseeing — Jonha Falls (also known as Gautamdhara) and Sita Falls. Return to hotel for dinner and overnight stay." },
+      { day: 2, title: "Dassam Falls → Transfer to Netarhat", desc: "After breakfast, visit the magnificent Dassam Falls — one of Jharkhand's most spectacular waterfalls. Post lunch, transfer to Netarhat — the 'Queen of Chotanagpur'. Check in to hotel and overnight stay." },
+      { day: 3, title: "Netarhat Sightseeing & Lodh Falls", desc: "Wake up early to catch the breathtaking Netarhat sunrise. After breakfast, explore the serene Netarhat plateau — viewpoints, forest trails, and the famous Magnolia Point. Post lunch, visit the stunning Lodh Falls (Burhaghaghri) — the highest waterfall in Jharkhand. Return to hotel for dinner and overnight stay." },
+      { day: 4, title: "Return to Ranchi · Patratu Valley · Train", desc: "After early breakfast, begin the return journey to Ranchi. En route, visit the scenic Patratu Valley and Patratu Lake & Dam — a mesmerising landscape of water and rolling hills. Drop at Ranchi railway station in time for the 10:00 PM train. Tour ends with beautiful memories of Jharkhand." },
+    ],
+    inclusions: ["Family-wise AC accommodation", "AC traveller", "Sightseeing vehicle", "All meals (breakfast, lunch & dinner)", "All taxes, toll & driver charges", "1L mineral water per day per person", "Experienced tour manager"],
+    exclusions: ["Train fare", "Personal expenses", "Cost from natural calamities, road blockage etc.", "Medical emergency costs", "Laundry, telephone charges, room service", "Porterage, tips", "Entry fees at monuments", "Anything not mentioned in inclusions"],
+    specialities: ["AC traveller — comfortable & spacious", "All meals included throughout", "Netarhat sunrise experience", "Highest waterfall in Jharkhand — Lodh Falls", "Special care for kids & senior citizens"],
+  },
 ];
 
 /* ─── Component ─────────────────────────────────────────── */

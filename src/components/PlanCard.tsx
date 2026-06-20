@@ -9,6 +9,7 @@ const itineraryMap: Record<string, string> = {
   "plan-kashmir":   "/itinerary#kashmir",
   "plan-muktinath": "/itinerary#muktinath",
   "plan-keonjhar":  "/itinerary#keonjhar",
+  "plan-ranchi":    "/itinerary#ranchi",
 };
 
 export default function PlanCard({ plan }: { plan: TravelPlan }) {

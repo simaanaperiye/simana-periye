@@ -1,12 +1,15 @@
 "use client";
 import { useState, useCallback } from "react";
 
+const ranchFiles = Array.from({ length: 18 }, (_, i) => `/gallery/ranchi/ranchi-${String(i + 1).padStart(2, "0")}.jpg`);
+
 const albums = [
   {
     key: "all",
     label: "All Photos",
     folder: "",
     files: [
+      ...ranchFiles,
       ...["IMG-20260321-WA0040","IMG-20260321-WA0041","IMG-20260321-WA0042","IMG-20260321-WA0045"].map(f => `/gallery/chitwan/${f}.jpg`),
       ...["IMG-20260105-WA0015","IMG-20260105-WA0045","IMG-20260105-WA0046","IMG-20260105-WA0047","IMG-20260105-WA0048","IMG-20260105-WA0049","IMG-20260105-WA0050","IMG-20260105-WA0051","IMG-20260105-WA0052","IMG-20260105-WA0054","IMG-20260105-WA0055","IMG-20260105-WA0056","IMG-20260105-WA0057","IMG-20260105-WA0058","IMG-20260105-WA0062","IMG-20260105-WA0063","IMG-20260105-WA0065","IMG-20260105-WA0067","IMG-20260105-WA0068"].map(f => `/gallery/nepal-group-tour/${f}.jpg`),
       ...["IMG-20260521-WA0000","IMG-20260521-WA0001","IMG-20260521-WA0002","IMG-20260521-WA0003","IMG-20260521-WA0004","IMG-20260521-WA0005","IMG-20260521-WA0006","IMG-20260521-WA0007","IMG-20260521-WA0008","IMG-20260521-WA0009"].map(f => `/gallery/pokhara-stay/${f}.jpg`),
@@ -14,6 +17,11 @@ const albums = [
       ...["IMG-20260521-WA0010","IMG-20260521-WA0011","IMG-20260521-WA0012","IMG-20260521-WA0014","IMG-20260521-WA0015","IMG-20260521-WA0016","IMG-20260521-WA0017","IMG-20260521-WA0020","IMG-20260521-WA0021","IMG-20260521-WA0023","IMG-20260521-WA0024","IMG-20260521-WA0025"].map(f => `/gallery/kathmandu-stay/${f}.jpg`),
       ...["IMG-20250328-WA0150","IMG-20250328-WA0151","IMG-20250328-WA0165","IMG-20250328-WA0166","IMG-20250328-WA0167","IMG-20250328-WA0173","IMG-20250328-WA0174","IMG-20250328-WA0181","IMG-20250328-WA0193","IMG-20250328-WA0199"].map(f => `/gallery/sarangkot/${f}.jpg`),
     ],
+  },
+  {
+    key: "ranchi",
+    label: "Ranchi · Netarhat",
+    files: ranchFiles,
   },
   {
     key: "sarangkot",

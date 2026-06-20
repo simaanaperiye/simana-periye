@@ -147,11 +147,27 @@ async function main() {
       departureDate: new Date("2026-07-23"),
       isActive: true,
     },
+    {
+      id: "plan-ranchi",
+      title: "Ranchi · Netarhat · Patratu Explorer",
+      destination: "Ranchi & Netarhat",
+      region: "Jharkhand",
+      description: "Thundering waterfalls, misty Netarhat plateau, and Patratu valley — Jharkhand's hidden treasures await.",
+      longDesc: "Explore the best of Jharkhand on this 4-day journey. Visit Jonha Falls and Sita Falls on arrival, witness the thundering Dassam Falls, ascend to the misty Netarhat plateau for a magical sunrise, marvel at Lodh Falls — the highest in Jharkhand — and conclude with the scenic Patratu Valley and Lake before returning to Ranchi for your train home. AC traveller throughout with all meals by our team.",
+      price: 10999,
+      duration: 4,
+      maxPeople: 20,
+      imageUrl: "/gallery/ranchi/ranchi-01.jpg",
+      badge: "New",
+      inclusions: JSON.stringify(["Family-wise AC accommodation", "AC traveller", "Sightseeing vehicle", "All meals", "All taxes, toll & driver charges", "1L mineral water per day", "Experienced tour manager"]),
+      departureDate: null,
+      isActive: true,
+    },
   ];
 
   await prisma.travelPlan.createMany({ data: plans });
 
-  console.log("✅ Seed complete — 8 plans seeded");
+  console.log("✅ Seed complete — 9 plans seeded");
 }
 
 main()
