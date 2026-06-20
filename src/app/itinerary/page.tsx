@@ -101,6 +101,31 @@ const tours = [
     exclusions: ["Train fare", "Personal expenses", "Cost from natural calamities, road blockage etc.", "Medical emergency costs", "Laundry, telephone charges, room service", "Porterage, tips", "Entry fees at monuments", "Anything not mentioned in inclusions"],
     specialities: ["AC traveller — comfortable & spacious", "All meals included throughout", "Netarhat sunrise experience", "Highest waterfall in Jharkhand — Lodh Falls", "Special care for kids & senior citizens"],
   },
+
+  /* ── 5. Arunachal Pradesh ── */
+  {
+    id: "arunachal",
+    planId: "plan-arunachal",
+    title: "Arunachal Hidden Trails",
+    subtitle: "7 Days · 6 Nights",
+    route: "Guwahati · Shergaon · Dirang · Tawang · Bumla Pass · Bomdila · Guwahati",
+    price: 22000,
+    duration: 7,
+    departure: "Departures on Request",
+    imageUrl: "/gallery/arunachal/arunachal-09.jpg",
+    days: [
+      { day: 1, title: "Guwahati → Shergaon", desc: "May offer puja at Kamakhya Mandir (if time permits). Proceed towards Shergaon through the stunning Assam countryside — enjoy the beauty of lush tea gardens and the vast Brahmaputra river view. Lunch en route. Arrive Shergaon, check in, dinner and overnight stay." },
+      { day: 2, title: "Shergaon → Dirang", desc: "Early breakfast, proceed towards Dirang through the breathtaking Arunachal landscapes. En route sightseeing: Tipi Orchidarium (one of Asia's finest orchid gardens), scenic waterfalls & pine forests, and a natural Hot Water Spring. Lunch en route. Arrive Dirang by evening — free for leisure. Dinner and overnight stay at Dirang." },
+      { day: 3, title: "Dirang → Tawang via Sela Pass", desc: "Early breakfast, start early. Drive through one of the most spectacular mountain roads in India. En route: Sela Pass (13,700 ft — one of the highest motorable passes in the world) and serene Sela Lake, Jaswant Garh War Memorial (tribute to the 1962 Indo-China war), and the beautiful Jang Waterfall. Arrive Tawang by evening. Check in, freshen up, dinner and overnight stay." },
+      { day: 4, title: "Tawang Local Sightseeing", desc: "After breakfast, full day local sightseeing: Tawang Monastery — the largest monastery in India and second largest in the world (400-year-old Gelug school of Tibetan Buddhism), Tawang War Memorial, Craft Centre & local market, Urgeling Monastery — the sacred birthplace of the 6th Dalai Lama. Evening free for exploring the local market. Dinner and overnight stay." },
+      { day: 5, title: "Bumla Pass & Madhuri Lake (Weather Permitting)", desc: "Early morning start (depends on weather and army clearance). Visit: Bumla Pass — the India–China border at 15,200 ft (subject to army permission & weather conditions — Complimentary), Madhuri Lake (PT Tso) — a hauntingly beautiful glacial lake made famous by Bollywood, and Sangetsar Lake. Return to Tawang for evening leisure and rest. Dinner and overnight stay." },
+      { day: 6, title: "Tawang → Bomdila", desc: "After breakfast, proceed towards Bomdila through scenic mountain roads. Visit: Bomdila Monastery — a peaceful Buddhist monastery with stunning valley views, Craft Centre & local market, Bomdila View Point — panoramic Himalayan vistas. Evening free for leisure. Dinner and overnight stay at Bomdila." },
+      { day: 7, title: "Bomdila → Guwahati (Return Train)", desc: "After breakfast, begin the journey back to Guwahati for your return train home. Lunch en route. Drop at Guwahati railway station. Tour ends with beautiful memories of India's last frontier." },
+    ],
+    inclusions: ["Deluxe accommodation throughout", "Comfortable tempo traveller throughout", "All meals (breakfast, lunch & dinner)", "Experienced driver & guide", "Efficient tour manager", "1L mineral water per person per day", "All parking, permits, taxes & toll charges", "Bumla Pass visit (Complimentary — subject to conditions)"],
+    exclusions: ["Train / flight fare", "Train food", "Entry fees at monuments", "Personal expenses", "Costs from natural calamities, road blockage, landslide etc.", "Laundry, telephone charges, room service", "Porterage, tips, puja charges", "Extra luxury at hotels, extra food, extra car", "Ropeway charges (if any)", "Jungle safari", "Anything not mentioned in inclusions"],
+    specialities: ["Bumla Pass (India–China border) — Complimentary", "Tawang Monastery — largest in India", "Sela Pass at 13,700 ft — high-altitude experience", "Preliminary first aid support throughout", "Special care for kids & senior citizens", "Registered company — CE No: 004617102116"],
+  },
 ];
 
 /* ─── Component ─────────────────────────────────────────── */

@@ -6,10 +6,11 @@ import type { TravelPlan } from "@prisma/client";
 
 // Plans that have a dedicated itinerary section
 const itineraryMap: Record<string, string> = {
-  "plan-kashmir":   "/itinerary#kashmir",
-  "plan-muktinath": "/itinerary#muktinath",
-  "plan-keonjhar":  "/itinerary#keonjhar",
-  "plan-ranchi":    "/itinerary#ranchi",
+  "plan-kashmir":    "/itinerary#kashmir",
+  "plan-muktinath":  "/itinerary#muktinath",
+  "plan-keonjhar":   "/itinerary#keonjhar",
+  "plan-ranchi":     "/itinerary#ranchi",
+  "plan-arunachal":  "/itinerary#arunachal",
 };
 
 export default function PlanCard({ plan }: { plan: TravelPlan }) {
