@@ -49,7 +49,7 @@ async function main() {
       badge: null,
       inclusions: JSON.stringify(["Teahouse accommodation", "All meals during trek", "Sherpa guides", "Porter services", "All permits", "Kathmandu hotel"]),
       departureDate: new Date("2026-09-01"),
-      isActive: true,
+      isActive: false,
     },
     {
       id: "plan-arunachal",
