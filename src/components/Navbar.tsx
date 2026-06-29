@@ -33,7 +33,7 @@ export default function Navbar() {
     ["Destinations", "/#destinations"],
     ["Gallery", "/gallery"],
     ["Itinerary", "/itinerary"],
-    ["About", "/#why"],
+    ["About", "/about"],
     ["Contact", "/#contact"],
   ];
 
@@ -49,7 +49,7 @@ export default function Navbar() {
         backdropFilter: !onHero || menuOpen ? "blur(20px)" : "none",
         boxShadow: !onHero ? "0 1px 0 rgba(0,0,0,0.08), 0 2px 12px rgba(0,0,0,0.06)" : "none",
       }}>
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+        <Link href="/about" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
           <div style={{
             background: onHero ? "rgba(255,255,255,0.92)" : "transparent",
             borderRadius: onHero ? 8 : 0,
