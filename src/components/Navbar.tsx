@@ -30,6 +30,7 @@ export default function Navbar() {
 
   // Hash links prefixed with / so they work from any page
   const navLinks: [string, string][] = [
+    ["Home", "/"],
     ["Destinations", "/#destinations"],
     ["Gallery", "/gallery"],
     ["Itinerary", "/itinerary"],
