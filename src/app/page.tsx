@@ -58,7 +58,7 @@ export default async function Home() {
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <span style={eyebrow}>Handpicked for You</span>
           <h2 style={sectionTitle}>Popular <em style={{ fontStyle: "italic", color: "var(--sky)" }}>Destinations</em></h2>
-          <p style={sectionDesc}>From the serene valleys of Kashmir to the tropical shores of Goa — we take you where your heart belongs.</p>
+          <p style={sectionDesc}>From Kashmir's paradise valleys and Tawang's golden monasteries to Nepal's sacred Muktinath and Jharkhand's hidden waterfalls — we take you where your heart belongs.</p>
           <div style={{ width: 40, height: 2, background: "var(--sky)", margin: "1.5rem auto 0", borderRadius: 1 }} />
         </div>
         <div className="dest-grid">
