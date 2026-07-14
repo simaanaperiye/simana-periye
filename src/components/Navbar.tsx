@@ -32,6 +32,7 @@ export default function Navbar() {
   const navLinks: [string, string][] = [
     ["Home", "/"],
     ["Destinations", "/#destinations"],
+    ["Upcoming Trips", "/upcoming-trips"],
     ["Gallery", "/gallery"],
     ["Itinerary", "/itinerary"],
     ["About", "/about"],
