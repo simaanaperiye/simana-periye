@@ -22,6 +22,12 @@ export default function CheckoutPage() {
     setLoading(true);
     setError("");
 
+    if (!INSTAMOJO_LINK) {
+      setError("Payment gateway is not configured yet. Please contact us directly via WhatsApp or phone to complete your booking.");
+      setLoading(false);
+      return;
+    }
+
     try {
       // Save booking to DB first
       const res = await fetch("/api/checkout", {
@@ -41,8 +47,9 @@ export default function CheckoutPage() {
         data_description: `Simana Periye: ${tripSummary}`,
       });
 
+      const redirectUrl = `${INSTAMOJO_LINK}?${params.toString()}`;
       clear();
-      window.location.href = `${INSTAMOJO_LINK}?${params.toString()}`;
+      window.location.href = redirectUrl;
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : "Something went wrong");
       setLoading(false);
