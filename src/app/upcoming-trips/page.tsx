@@ -372,16 +372,20 @@ function TripCard({ trip }: { trip: Trip }) {
         <div style={{ padding: "0.75rem 1.1rem 1.1rem", marginTop: "auto" }}>
           {!open ? (
             <button
-              onClick={() => setOpen(true)}
+              onClick={() => trip.price && setOpen(true)}
+              disabled={!trip.price}
+              title={!trip.price ? "Contact us for pricing" : undefined}
               style={{
                 width: "100%", padding: "0.65rem", fontSize: "0.78rem", fontWeight: 700,
-                letterSpacing: "0.08em", textTransform: "uppercase", cursor: "pointer",
-                background: added ? "var(--sky-dark)" : "var(--sky)",
-                color: "white", border: "none", borderRadius: 4,
+                letterSpacing: "0.08em", textTransform: "uppercase",
+                cursor: trip.price ? "pointer" : "not-allowed",
+                background: added ? "var(--sky-dark)" : trip.price ? "var(--sky)" : "#cbd5e1",
+                color: trip.price ? "white" : "#64748b",
+                border: "none", borderRadius: 4,
                 transition: "background 0.3s",
               }}
             >
-              {added ? "✓ Added to Cart" : "Book Now"}
+              {added ? "✓ Added to Cart" : trip.price ? "Book Now" : "Contact for Price"}
             </button>
           ) : (
             <div style={{
@@ -439,7 +443,7 @@ function TripCard({ trip }: { trip: Trip }) {
                 </button>
                 <button
                   onClick={handleAddToCart}
-                  disabled={totalPeople === 0}
+                  disabled={totalPeople === 0 || !trip.price}
                   style={{
                     flex: 2, padding: "0.6rem", fontSize: "0.78rem", fontWeight: 700,
                     letterSpacing: "0.06em", textTransform: "uppercase", cursor: "pointer",
