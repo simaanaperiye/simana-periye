@@ -13,7 +13,7 @@ export interface CartItem {
 
 interface CartContextType {
   items: CartItem[];
-  add: (item: Omit<CartItem, "quantity">) => void;
+  add: (item: Omit<CartItem, "quantity">, qty?: number) => void;
   remove: (planId: string) => void;
   update: (planId: string, quantity: number) => void;
   clear: () => void;
@@ -26,11 +26,11 @@ const CartContext = createContext<CartContextType | null>(null);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
 
-  const add = useCallback((item: Omit<CartItem, "quantity">) => {
+  const add = useCallback((item: Omit<CartItem, "quantity">, qty = 1) => {
     setItems((prev) => {
       const existing = prev.find((i) => i.planId === item.planId);
-      if (existing) return prev.map((i) => i.planId === item.planId ? { ...i, quantity: i.quantity + 1 } : i);
-      return [...prev, { ...item, quantity: 1 }];
+      if (existing) return prev.map((i) => i.planId === item.planId ? { ...i, quantity: i.quantity + qty } : i);
+      return [...prev, { ...item, quantity: qty }];
     });
   }, []);
 
