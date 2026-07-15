@@ -16,7 +16,7 @@ export default async function AdminOrders() {
   if (!session.isLoggedIn) redirect("/admin/login");
 
   const orders = await prisma.order.findMany({
-    include: { items: { include: { plan: { select: { title: true } } } } },
+    include: { items: true },
     orderBy: { createdAt: "desc" },
   });
 
@@ -53,7 +53,7 @@ export default async function AdminOrders() {
               <p style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>{order.customerEmail}</p>
             </div>
             <div style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
-              {order.items.map((item) => `${item.plan.title} ×${item.quantity}`).join(", ")}
+              {order.items.map((item) => `${item.planTitle || item.planId} ×${item.quantity}`).join(", ")}
             </div>
             <span style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.15rem", color: "var(--sky-dark)" }}>₹{order.totalAmount.toLocaleString("en-IN")}</span>
             <span style={{ fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", padding: "0.25rem 0.6rem", borderRadius: 2, ...statusColor(order.status) }}>

@@ -28,7 +28,6 @@ model TravelPlan {
   isActive      Boolean     @default(true)
   createdAt     DateTime    @default(now())
   updatedAt     DateTime    @updatedAt
-  orderItems    OrderItem[]
 }
 
 model Order {
@@ -37,18 +36,18 @@ model Order {
   customerEmail String
   totalAmount   Float
   status        String      @default("confirmed")
-  createdAt       DateTime    @default(now())
-  items           OrderItem[]
+  createdAt     DateTime    @default(now())
+  items         OrderItem[]
 }
 
 model OrderItem {
-  id       String     @id @default(cuid())
-  quantity Int
-  price    Float
-  plan     TravelPlan @relation(fields: [planId], references: [id])
-  planId   String
-  order    Order      @relation(fields: [orderId], references: [id])
-  orderId  String
+  id        String  @id @default(cuid())
+  quantity  Int
+  price     Float
+  planId    String
+  planTitle String  @default("")
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   String
 }
 
 model AdminUser {
