@@ -40,7 +40,7 @@ const trips: { month: string; items: Trip[] }[] = [
         duration: "3N-4D",
         durationDays: 4,
         dates: "31 Jul · 25 Sep",
-        price: 10999,
+        price: 9799,
         badge: "Group Tour",
       },
       {
@@ -139,6 +139,19 @@ const trips: { month: string; items: Trip[] }[] = [
         priceNote: "double sharing",
       },
       {
+        id: "upcoming-kerala",
+        image: "/upcoming/kerala.jpg",
+        title: "Kerala in Monsoon",
+        subtitle: "Kochi · Munnar · Alleppey · Thekkady",
+        destination: "Kerala",
+        duration: "5N-6D",
+        durationDays: 6,
+        dates: "18 Sep · 20 Sep",
+        price: 18999,
+        highlights: ["Houseboat Stay at Alleppey", "Tea Gardens & Waterfalls", "Backwater Serenity", "Wildlife & Spice Plantation"],
+        badge: "Monsoon Special",
+      },
+      {
         id: "plan-keonjhar",
         image: "/upcoming/keonjhar.jpg",
         title: "Keonjhar Waterfalls Explorer",
@@ -154,6 +167,20 @@ const trips: { month: string; items: Trip[] }[] = [
   {
     month: "October 2026",
     items: [
+      {
+        id: "upcoming-darjeeling-sittong",
+        image: "/upcoming/darjeeling-sittong.jpg",
+        title: "Darjeeling · Sittong",
+        subtitle: "Group Tour · NJP to NJP",
+        destination: "Darjeeling & Sittong, West Bengal",
+        duration: "3N-4D",
+        durationDays: 4,
+        dates: "16 Oct",
+        price: 6770,
+        highlights: ["Tiger Hill Sunrise", "Batasia Loop & Ghoom Monastery", "HMI Museum", "Padmaja Naidu Zoo", "Sittong Orange Garden"],
+        badge: "Group Tour",
+        priceNote: "min 8 pax",
+      },
       {
         id: "upcoming-kashmir-pujo",
         image: "/upcoming/kashmir-pujo.jpg",
