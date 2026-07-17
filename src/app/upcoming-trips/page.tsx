@@ -76,7 +76,7 @@ const trips: { month: string; items: Trip[] }[] = [
       },
       {
         id: "upcoming-dhanbad",
-        image: "/upcoming/dhanbad-topchachi.jpg",
+        image: "/upcoming/sasaram.jpg",
         title: "Dhanbad · Topchachi",
         destination: "Dhanbad, Jharkhand",
         duration: "1N-2D",
@@ -103,7 +103,7 @@ const trips: { month: string; items: Trip[] }[] = [
       },
       {
         id: "upcoming-sasaram",
-        image: "/upcoming/sasaram.jpg",
+        image: "/upcoming/dhanbad-topchachi.jpg",
         title: "Sasaram Heritage",
         destination: "Sasaram, Bihar",
         duration: "2N-3D",
