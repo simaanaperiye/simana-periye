@@ -18,6 +18,175 @@ type Trip = {
   badge?: string;
 };
 
+const pujaSpecials: Trip[] = [
+  {
+    id: "puja-nepal-muktinath",
+    image: "/upcoming/nepal-muktinath.jpg",
+    title: "Nepal with Muktinath",
+    destination: "Nepal",
+    duration: "7N-8D",
+    durationDays: 8,
+    dates: "16 Oct · 25 Oct",
+    price: 21999,
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-arunachal",
+    image: "/upcoming/arunachal.jpg",
+    title: "Arunachal Pradesh",
+    subtitle: "Tawang · Bomdila · Shergaon",
+    destination: "Arunachal Pradesh",
+    duration: "6N-7D",
+    durationDays: 7,
+    dates: "16 Oct · 25 Oct",
+    price: 21499,
+    priceNote: "Premium ₹22,499pp",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-kashmir",
+    image: "/upcoming/kashmir-pujo.jpg",
+    title: "Kashmir",
+    destination: "Kashmir",
+    duration: "6N-7D",
+    durationDays: 7,
+    dates: "15 Oct · 26 Oct",
+    price: 16999,
+    priceNote: "Premium ₹18,999pp",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-vizag-araku",
+    image: "/upcoming/vizag-araku.jpg",
+    title: "Vizag · Araku",
+    destination: "Visakhapatnam, Andhra Pradesh",
+    duration: "3N-4D",
+    durationDays: 4,
+    dates: "15 Oct · 26 Oct",
+    price: 9599,
+    priceNote: "Premium ₹10,499pp",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-varanasi-ayodhya",
+    image: "/upcoming/varanasi-ayodhya.jpg",
+    title: "Varanasi · Ayodhya",
+    destination: "Uttar Pradesh",
+    duration: "3N-4D",
+    durationDays: 4,
+    dates: "17 Oct",
+    price: 10699,
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-ranchi-betla",
+    image: "/upcoming/ranchi-netarhat.jpg",
+    title: "Ranchi · Netarhat · Betla",
+    destination: "Jharkhand",
+    duration: "4N-5D",
+    durationDays: 5,
+    dates: "16 Oct · 28 Oct",
+    price: 11999,
+    priceNote: "Premium ₹12,999pp",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-haridwar",
+    image: "/upcoming/haridwar-mussoorie.jpg",
+    title: "Haridwar · Hrishikesh · Mussoorie",
+    subtitle: "Dehradun included",
+    destination: "Uttarakhand",
+    duration: "4N-5D",
+    durationDays: 5,
+    dates: "16 Oct",
+    price: 11999,
+    priceNote: "Premium ₹12,999pp",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-meghalaya",
+    image: "/upcoming/meghalaya.jpg",
+    title: "Meghalaya",
+    subtitle: "Shillong · Cherrapunji · Dawki",
+    destination: "Meghalaya",
+    duration: "5N-6D",
+    durationDays: 6,
+    dates: "16 Oct",
+    price: 16599,
+    priceNote: "Premium ₹18,299pp",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-andaman",
+    image: "/upcoming/andamaan.jpg",
+    title: "Andaman (Customized)",
+    destination: "Andaman & Nicobar Islands",
+    duration: "5N-6D",
+    durationDays: 6,
+    dates: "Any Date",
+    price: 19199,
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-darjeeling",
+    image: "/upcoming/darjeeling.jpg",
+    title: "Premium Darjeeling",
+    destination: "Darjeeling, West Bengal",
+    duration: "2N-3D",
+    durationDays: 3,
+    dates: "Any Date",
+    price: 6250,
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-silk-route",
+    image: "/upcoming/silk-route.jpg",
+    title: "Silk Route",
+    destination: "Sikkim",
+    duration: "4N-5D",
+    durationDays: 5,
+    dates: "27 Oct",
+    price: 6399,
+    priceNote: "min 8 pax",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-kerala",
+    image: "/upcoming/kerala.jpg",
+    title: "Kerala",
+    subtitle: "Kochi · Munnar · Alleppey · Thekkady",
+    destination: "Kerala",
+    duration: "5N-6D",
+    durationDays: 6,
+    dates: "17 Oct · 26 Oct",
+    price: 20499,
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-shimla-manali",
+    image: "/upcoming/himachal.jpg",
+    title: "Shimla · Manali · Kasol",
+    destination: "Himachal Pradesh",
+    duration: "6N-7D",
+    durationDays: 7,
+    dates: "26 Oct",
+    price: 15499,
+    priceNote: "Premium ₹16,499pp",
+    badge: "Puja Special",
+  },
+  {
+    id: "puja-kinnaur-kalpa",
+    image: "/upcoming/kinnaur-kalpa.jpg",
+    title: "Kinnaur · Kalpa",
+    destination: "Himachal Pradesh",
+    duration: "5N-6D",
+    durationDays: 6,
+    dates: "16 Oct",
+    price: 18999,
+    badge: "Puja Special",
+  },
+];
+
 const trips: { month: string; items: Trip[] }[] = [
   {
     month: "July 2026",
@@ -562,6 +731,45 @@ export default function UpcomingTripsPage() {
           </div>
         ))}
       </div>
+
+      {/* Puja Special Section */}
+      <section style={{ background: "linear-gradient(160deg, #3d0a0a 0%, #7b1a1a 40%, #b8460a 100%)", padding: "4rem 5%" }}>
+        <div style={{ maxWidth: 1300, margin: "0 auto" }}>
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <div style={{ fontSize: "0.7rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(255,215,0,0.7)", marginBottom: "0.75rem" }}>
+              Simana Periye · Celebrate. Explore. Create Memories.
+            </div>
+            <h2 style={{
+              fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.2rem,5vw,4rem)",
+              fontWeight: 400, color: "#ffd700", lineHeight: 1.1, margin: "0 0 0.5rem",
+              textShadow: "0 2px 20px rgba(0,0,0,0.5)",
+            }}>
+              Durga Puja Special Tours
+            </h2>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.92rem", maxWidth: 480, margin: "0 auto 1.5rem" }}>
+              14 handpicked Puja getaways · All packages Deluxe &amp; Premium · Train ticket excluded
+            </p>
+            <div style={{ display: "inline-flex", gap: "0.5rem", background: "rgba(255,215,0,0.12)", border: "1px solid rgba(255,215,0,0.3)", borderRadius: 20, padding: "0.4rem 1.2rem", fontSize: "0.72rem", color: "#ffd700", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+              ★ Special Puja Offer · Book by 25 Jul 2026
+            </div>
+          </div>
+
+          {/* Grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "1.25rem" }}>
+            {pujaSpecials.map((trip) => (
+              <div key={trip.id} style={{ position: "relative" }}>
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(to right, #ffd700, #ff8c00)", zIndex: 1, borderRadius: "10px 10px 0 0" }} />
+                <TripCard trip={trip} />
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign: "center", color: "rgba(255,255,255,0.45)", fontSize: "0.72rem", marginTop: "2rem", letterSpacing: "0.05em" }}>
+            * All packages are Deluxe / Premium &nbsp;·&nbsp; Train tickets not included &nbsp;·&nbsp; Special Puja gifts for early bookings
+          </p>
+        </div>
+      </section>
 
       {/* Trip sections by month */}
       <main style={{ padding: "4rem 5% 6rem", maxWidth: 1300, margin: "0 auto" }}>
