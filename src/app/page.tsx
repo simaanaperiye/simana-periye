@@ -44,7 +44,7 @@ export default async function Home() {
       </section>
 
       {/* ── STATS ── */}
-      <div className="stats-grid" style={{ background: "#f5f5f5", borderTop: "1px solid rgba(0,0,0,0.08)", borderBottom: "1px solid rgba(0,0,0,0.08)", padding: "2.5rem 5%" }}>
+      <div className="stats-grid" style={{ background: "#ffffff", borderTop: "1px solid rgba(14,165,233,0.12)", borderBottom: "1px solid rgba(14,165,233,0.12)", padding: "2.5rem 5%" }}>
         {[["180+", "Destinations"], ["24,000+", "Happy Travelers"], ["98%", "Satisfaction"], ["12+", "Years"]].map(([num, label]) => (
           <div key={label} style={{ textAlign: "center" }}>
             <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "2.8rem", fontWeight: 300, color: "var(--sky)", lineHeight: 1 }}>{num}</div>
@@ -67,7 +67,7 @@ export default async function Home() {
       </section>
 
       {/* ── WHY ── */}
-      <section id="why" style={{ padding: "7rem 5%", background: "#f0f9ff", scrollMarginTop: "80px" }}>
+      <section id="why" style={{ padding: "7rem 5%", background: "#ffffff", scrollMarginTop: "80px" }}>
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <span style={eyebrow}>Why Simana Periye</span>
           <h2 style={sectionTitle}>Travel the Way It <em style={{ fontStyle: "italic", color: "var(--sky)" }}>Should Be</em></h2>
@@ -76,21 +76,17 @@ export default async function Home() {
         <WhyCards />
       </section>
 
-      {/* ── CTA — sky gradient overlay on photo ── */}
-      <section id="contact" style={{ position: "relative", padding: "8rem 5%", textAlign: "center", overflow: "hidden", scrollMarginTop: "80px" }}>
-        <div style={{ position: "absolute", inset: 0, background: `url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80') center/cover no-repeat` }} />
-        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.75)" }} />
-        <div style={{ position: "relative", zIndex: 1 }}>
-          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.5rem,5vw,4.5rem)", fontWeight: 300, lineHeight: 1.1, marginBottom: "1.2rem", color: "white" }}>
-            Ready to Start Your <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.75)" }}>Journey?</em>
-          </h2>
-          <p style={{ color: "rgba(255,255,255,0.85)", maxWidth: 500, margin: "0 auto 2.5rem", lineHeight: 1.8 }}>
-            Let our experts craft the perfect itinerary. No cookie-cutter packages — pure personalised adventure.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="mailto:simanaperiyet@gmail.com" style={ctaPrimaryBtn}>Contact Us Today</a>
-            <a href="tel:+919903149484" style={ctaSecondaryBtn}>Call +91 99031 49484</a>
-          </div>
+      {/* ── CTA ── */}
+      <section id="contact" style={{ padding: "8rem 5%", textAlign: "center", background: "linear-gradient(135deg, var(--sky-dark), var(--sky))", scrollMarginTop: "80px" }}>
+        <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(2.5rem,5vw,4.5rem)", fontWeight: 300, lineHeight: 1.1, marginBottom: "1.2rem", color: "white" }}>
+          Ready to Start Your <em style={{ fontStyle: "italic", color: "rgba(255,255,255,0.75)" }}>Journey?</em>
+        </h2>
+        <p style={{ color: "rgba(255,255,255,0.85)", maxWidth: 500, margin: "0 auto 2.5rem", lineHeight: 1.8 }}>
+          Let our experts craft the perfect itinerary. No cookie-cutter packages — pure personalised adventure.
+        </p>
+        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <a href="mailto:simanaperiyet@gmail.com" style={ctaPrimaryBtn}>Contact Us Today</a>
+          <a href="tel:+919903149484" style={ctaSecondaryBtn}>Call +91 99031 49484</a>
         </div>
       </section>
 
