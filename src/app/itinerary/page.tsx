@@ -102,7 +102,52 @@ const tours = [
     specialities: ["AC traveller — comfortable & spacious", "All meals included throughout", "Netarhat sunrise experience", "Highest waterfall in Jharkhand — Lodh Falls", "Special care for kids & senior citizens"],
   },
 
-  /* ── 5. Arunachal Pradesh ── */
+  /* ── 5. Andaman ── */
+  {
+    id: "andaman",
+    planId: "upcoming-andamaan",
+    title: "Awesome Andamaan",
+    subtitle: "7 Days · 6 Nights",
+    route: "Port Blair · Ross Island · North Bay · Havelock · Neil Island · Baratang",
+    price: 19199,
+    duration: 7,
+    departure: "On Request",
+    imageUrl: "/upcoming/andamaan.jpg",
+    days: [
+      { day: 1, title: "Port Blair Arrival", desc: "Arrive at Port Blair airport — warm welcome and airport pickup. Check in to your hotel and freshen up. Visit the serene Corbyn's Cove Beach in the afternoon. Evening at the iconic Cellular Jail followed by the spine-chilling Light & Sound Show that brings the freedom struggle to life. Dinner and overnight stay at Port Blair." },
+      { day: 2, title: "Ross Island & North Bay Island", desc: "After breakfast, embark on a full-day excursion to Ross Island — the former British administrative headquarters, now a hauntingly beautiful ruin overtaken by nature. Ferry across to North Bay Island, famous for its crystal-clear waters and vibrant coral reefs. Optional water sports available (at extra cost): snorkelling, sea walk, glass-bottom boat ride. Return by evening. Dinner and overnight stay at Port Blair." },
+      { day: 3, title: "Port Blair → Havelock Island", desc: "Morning breakfast and hotel check-out. Board your private cruise to Havelock Island — one of India's most beautiful islands. Arrive and check in. Head to the world-renowned Radhanagar Beach (Beach No. 7) — voted Asia's Best Beach. Enjoy the sunset over the turquoise Andaman Sea. Dinner and overnight stay at Havelock." },
+      { day: 4, title: "Havelock → Neil Island", desc: "After breakfast, check out and board the private cruise to Neil Island — the gem of the Andamans. Visit Bharatpur Beach, famous for calm shallow waters and vivid coral reefs. Explore Laxmanpur Beach, a perfect sunset spot with golden sands. See the incredible Natural Bridge — a unique rock formation carved by the sea. Dinner and overnight stay at Neil Island." },
+      { day: 5, title: "Neil Island → Port Blair", desc: "After breakfast, check out and board the private cruise back to Port Blair. Check in to hotel and freshen up. Spend the evening at Chidiya Tapu — the 'Bird Island' — a serene mangrove-fringed beach famous for spectacular sunsets and rich birdlife. Dinner and overnight stay at Port Blair." },
+      { day: 6, title: "Baratang Island Tour", desc: "Early morning departure for Baratang Island — a journey through dense mangrove creeks and tribal reserve forests. Visit the famous Limestone Caves, a natural wonder formed over millions of years, accessible by boat ride through mangroves. Also explore the mud volcano on the way. Return to Port Blair by evening. Dinner and overnight stay." },
+      { day: 7, title: "Port Blair Departure", desc: "Leisurely breakfast and hotel check-out. Spend any remaining time with last-minute souvenirs — conch shells, pearls, and Andaman handicrafts. Timely airport drop in a private AC vehicle. Depart with sweet Andaman memories, the sound of waves, and the blue of the sea etched in your heart." },
+    ],
+    inclusions: [
+      "06 Nights hotel accommodation",
+      "AP Meal Plan — Breakfast, Lunch & Dinner",
+      "Private AC vehicle for all transfers & sightseeing",
+      "Private cruise tickets (Port Blair – Havelock – Neil – Port Blair)",
+      "Airport pick-up & drop",
+      "Entry tickets & permit charges",
+      "Dedicated tour assistance throughout",
+    ],
+    exclusions: [
+      "Airfare (to / from Port Blair)",
+      "Personal expenses",
+      "Water sports activities (snorkelling, sea walk, glass-bottom boat etc.)",
+      "Anything not mentioned under inclusions",
+    ],
+    specialities: [
+      "Private cruise — no shared ferry queues",
+      "All meals included (AP plan)",
+      "Radhanagar Beach — Asia's Best Beach",
+      "Baratang Limestone Caves & Mangrove Creek",
+      "Cellular Jail Light & Sound Show",
+      "Special care for kids & senior citizens",
+    ],
+  },
+
+  /* ── 6. Arunachal Pradesh ── */
   {
     id: "arunachal",
     planId: "plan-arunachal",
